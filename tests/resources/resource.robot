@@ -22,6 +22,7 @@ Open Headless Chrome Browser to Page
     Call Method    ${chrome_options}    add_argument    --disable-extensions
     Call Method    ${chrome_options}    add_argument    --headless
     Call Method    ${chrome_options}    add_argument    --disable-gpu
+    Call Method    ${chrome_options}    add_argument    --no-sandbox
     Create Webdriver    Chrome    chrome_options=${chrome_options}
     Set Window Size    2560    1440
     Go To    ${PAGE URL}

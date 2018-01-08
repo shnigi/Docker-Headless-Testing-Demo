@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 source ./executerobot.sh
 
 if [[ $1 == ./* ]];

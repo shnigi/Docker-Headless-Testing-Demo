@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # executerobot.sh: a  shell script to run robot tests. These commands can be used directly as well.
 
 function runByTestName() {
