@@ -15,7 +15,7 @@
 ### With native robot command:
 
 1. docker exec -t container_name robot -v BROWSER:HeadlessChrome -d ./results .
-2. docker exec -t container_name robot -v BROWSER:HeadlessFirefox -d .results .
+2. docker exec -t container_name robot -v BROWSER:HeadlessFirefox -d ./results .
 
 ## Get results
 
