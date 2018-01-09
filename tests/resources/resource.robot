@@ -29,7 +29,7 @@ Open Headless Chrome Browser to Page
     Page Should Be Open
 
 Firefox true headless
-    ${firefox options} =     Evaluate    sys.modules['selenium.webdriver'].firefox.webdriver.Options()    sys, selenium.webdriver
+    ${firefox options}=     Evaluate    sys.modules['selenium.webdriver'].firefox.webdriver.Options()    sys, selenium.webdriver
     Call Method    ${firefox options}   add_argument    -headless
     Create Webdriver    Firefox    firefox_options=${firefox options}
     Set Window Size    1920    1080
