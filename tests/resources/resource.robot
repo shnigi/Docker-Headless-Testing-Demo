@@ -30,7 +30,7 @@ Open Headless Chrome Browser to Page
 
 Firefox true headless
     ${firefox options} =     Evaluate    sys.modules['selenium.webdriver'].firefox.webdriver.Options()    sys, selenium.webdriver
-    Call Method    ${firefox options}   add_argument    -headless
+    Call Method    ${firefox options}   add_argument    --headless
     Create Webdriver    Firefox    firefox_options=${firefox options}
     Set Window Size    2560    1440
     Go To    ${PAGE URL}
