@@ -1,6 +1,6 @@
 *** Settings ***
 Resource  ../resources/resource.robot
-Suite Setup  Open page
+Suite Setup  Open Browser To main page
 Suite Teardown  Close All Browsers
 
 *** Variables ***

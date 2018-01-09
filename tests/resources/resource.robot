@@ -10,7 +10,7 @@ ${DELAY}          0s
 ${PAGE URL}       https://${SERVER}/
 
 *** Keywords ***
-Open Browser To login page
+Open Browser To main page
     Run Keyword If      '${BROWSER}' == 'HeadlessChrome'      Open Headless Chrome Browser to Page
     ...     ELSE IF     '${BROWSER}' == 'HeadlessFirefox'     Firefox true headless
     ...     ELSE     Open Browser to Page
@@ -43,6 +43,3 @@ Open Browser to Page
 
 Page Should Be Open
     Location Should Contain    ${PAGE URL}
-
-Open page
-  Open Browser To login page

@@ -1,11 +1,18 @@
 # Native Headless Firefox&Chrome Robotframework with Docker
 
-steps:
+## steps:
 
 1. docker build -t your_image_name .
 2. docker run --name container_name -td --cap-add=SYS_ADMIN image_name
 
-Run tests:
+## Run tests:
+
+### With scripts:
+
+1. docker exec -it robokontti bash -c './run_all_tests.sh HeadlessChrome'
+2. docker exec -it robokontti bash -c './run_all_tests.sh HeadlessFirefox'
+
+### With native robot command:
 
 1. docker exec -t container_name robot -v BROWSER:HeadlessChrome -d ./results .
 2. docker exec -t container_name robot -v BROWSER:HeadlessFirefox -d .results .
@@ -15,10 +22,6 @@ Run tests:
 Copy test results from container
 
 1. docker cp container_name:./app/results ~/your_local_location
-
-### Notes
-
-Marionette driver goes bingbong if you try to execute tests when SSH logged in to the container. So run tests with docker exec!
 
 # Local / native setup
 
