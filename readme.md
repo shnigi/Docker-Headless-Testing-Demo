@@ -1,4 +1,28 @@
-# Setup firefox:
+# Native Headless Firefox&Chrome Robotframework with Docker
+
+steps:
+
+1. docker build -t your_image_name .
+2. docker run --name container_name -td --cap-add=SYS_ADMIN image_name
+
+Run tests:
+
+1. docker exec -t container_name robot -v BROWSER:HeadlessChrome -d ./results .
+2. docker exec -t container_name robot -v BROWSER:HeadlessFirefox -d .results .
+
+## Get results
+
+Copy test results from container
+
+1. docker cp container_name:./app/results ~/your_local_location
+
+### Notes
+
+Marionette driver goes bingbong if you try to execute tests when SSH logged in to the container. So run tests with docker exec!
+
+# Local / native setup
+
+## Setup firefox:
 
 1. Download latest firefox version 57
 2. Download latest geckodriver https://github.com/mozilla/geckodriver/releases and place it /usr/local/bin/geckodriver
@@ -12,7 +36,7 @@ Try that you have all in your path:
 2. geckodriver --version
 3. python -c "import selenium; print(selenium.__version__)"
 
-# Setup Chrome:
+## Setup Chrome:
 
 1. Download latest chrome
 2. Download chromedriver (current working version should be 2.34) https://chromedriver.storage.googleapis.com/index.html
@@ -22,7 +46,7 @@ Try that its working by running:
 
 1. chromedriver --version
 
-# Run tests
+## Run tests
 
 ./run_all_tests.sh will run all tests, it accepts parameters:
 
@@ -32,3 +56,15 @@ Try that its working by running:
 4. Default is Chrome if no parameter is passed.
 
 You can use the pybot commands directly from executerobot.sh as well instead of shell scripts.
+
+# Good to know commands:
+
+docker images // Show all images
+docker container ls // List containers
+docker ps -a // Show all containers
+docker rmi -f // Force delete image: name or ID
+docker rm container_id // Delete container with ID or name
+docker stop $(docker ps -a -q) // Stop all containers
+docker rm $(docker ps -a -q) // Delete all containers
+docker exec -it container_name /bin/bash // SSH to container
+docker stop container_name // Stop container with name or ID

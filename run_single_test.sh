@@ -1,5 +1,5 @@
 #!/bin/bash
-source ./executerobot.sh
+source ./tests/executerobot.sh
 
 if [[ $1 == ./* ]];
 then

@@ -27,6 +27,6 @@ WORKDIR /app
 
 COPY . /app
 
-RUN chmod +x ./tests/run_all_tests.sh
-RUN chmod +x ./tests/run_single_test.sh
+RUN chmod +x ./run_all_tests.sh
+RUN chmod +x ./run_single_test.sh
 RUN chmod +x ./tests/executerobot.sh
