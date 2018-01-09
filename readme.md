@@ -27,7 +27,7 @@ Copy test results from container
 
 ## Setup firefox:
 
-1. Download latest firefox version 57
+1. Download latest firefox version 57 or at least 56 which is in this docker image
 2. Download latest geckodriver https://github.com/mozilla/geckodriver/releases and place it /usr/local/bin/geckodriver
 3. Install latest selenium driver
 
@@ -63,11 +63,19 @@ You can use the pybot commands directly from executerobot.sh as well instead of 
 # Good to know commands:
 
 docker images // Show all images
+
 docker container ls // List containers
+
 docker ps -a // Show all containers
+
 docker rmi -f // Force delete image: name or ID
+
 docker rm container_id // Delete container with ID or name
+
 docker stop $(docker ps -a -q) // Stop all containers
+
 docker rm $(docker ps -a -q) // Delete all containers
+
 docker exec -it container_name /bin/bash // SSH to container
+
 docker stop container_name // Stop container with name or ID
