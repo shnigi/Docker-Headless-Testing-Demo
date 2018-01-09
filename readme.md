@@ -9,8 +9,8 @@
 
 ### With scripts:
 
-1. docker exec -it robokontti bash -c './run_all_tests.sh HeadlessChrome'
-2. docker exec -it robokontti bash -c './run_all_tests.sh HeadlessFirefox'
+1. docker exec -it container_name bash -c './run_all_tests.sh HeadlessChrome'
+2. docker exec -it container_name bash -c './run_all_tests.sh HeadlessFirefox'
 
 ### With native robot command:
 
