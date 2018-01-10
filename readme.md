@@ -1,5 +1,16 @@
 # Native Headless Firefox&Chrome Robotframework with Docker
 
+## Results for single test
+
+|                         | Round 1      | Round 2      | Round 3      | Round 4      |
+|-------------------------|--------------|--------------|--------------|--------------|
+| Chrome                  | 00:00:12.529 | 00:00:11.523 | 00:00:11.996 | 00:00:10.203 |
+| Headless Chrome         | 00:00:09.805 | 00:00:08.691 | 00:00:09.628 | 00:00:09.765 |
+| Firefox                 | 00:00:16.558 | 00:00:15.812 | 00:00:13.343 | 00:00:14.041 |
+| Headless Firefox        | 00:00:12.026 | 00:00:13.835 | 00:00:14.509 | 00:00:12.839 |
+| Docker Headless Chrome  | 00:00:09.761 | 00:00:09.175 | 00:00:11.417 | 00:00:11.037 |
+| Docker Headless Firefox | 00:00:10.691 | 00:00:11.691 | 00:00:11.703 | 00:00:11.743 |
+
 ## steps:
 
 1. docker build -t your_image_name .
