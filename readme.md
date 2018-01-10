@@ -13,7 +13,9 @@
 
 ## From fastest to slowest
 
-This suite contains only one test, so it is not very accurate. 
+This suite contains only one test, so it is not very accurate.
+
+Docker uses FF 56, in my local environment its 57. That can be one answer to why local headless FF is so slow.
 
 | Browser                 | Time         |
 |-------------------------|--------------|
