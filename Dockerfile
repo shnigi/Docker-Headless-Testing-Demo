@@ -6,8 +6,8 @@ RUN pip install -U pip
 RUN wget --no-verbose https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 RUN dpkg --install google-chrome-stable_current_amd64.deb; apt-get --fix-broken --assume-yes install
 
-RUN pip install --no-cache-dir --pre \
-  robotframework-seleniumlibrary
+COPY requirements.txt /tmp/requirements.txt
+RUN  pip install -r /tmp/requirements.txt
 
 RUN wget --no-verbose --output-document /tmp/firefox-56.0.tar.bz2 https://ftp.mozilla.org/pub/firefox/releases/56.0/linux-x86_64/en-US/firefox-56.0.tar.bz2 && \
     tar -xjf /tmp/firefox-56.0.tar.bz2 && \
